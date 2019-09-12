@@ -1,22 +1,19 @@
-$(document).ready(function() {
-  $(".menu").click(function() {
-    $(".overlay").fadeIn();
-    $(".image").each(function(index) {
-      $(this)
-        .delay(400 * index)
-        .slideDown("slow");
-    });
-    $(".mobile-nav li")
-      .delay(1200)
-      .each(function(index) {
-        $(this)
-          .delay(400 * index)
-          .slideDown("slow");
-      });
-  });
-  $(".close").click(function() {
-    $(".overlay").fadeOut();
-    $(".image").fadeOut();
-    $(".mobile-nav li").fadeOut();
-  });
+let hiddenClass = document.querySelectorAll(".js--intro");
+let introContainer = document.querySelector(".intro__container");
+// let headerImage = document.querySelector('.')
+
+function removeIntroHidden() {
+  for (let i = 0; i < hiddenClass.length; i++) {
+    hiddenClass[i].classList.remove("intro--hidden");
+  }
+  introContainer.style.display = "none";
+}
+
+function showSection() {
+  document.querySelector(".work").classList.add("animate");
+}
+
+window.addEventListener("load", function() {
+  setTimeout(removeIntroHidden, 7000);
+  setTimeout(showSection, 2000);
 });
