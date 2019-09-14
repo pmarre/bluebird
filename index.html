@@ -3,6 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bluebird</title>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather:300|Montserrat:900&display=swap"
       rel="stylesheet"
@@ -85,10 +88,18 @@
       </div>
       <div class="footer__contact_info">
         <div class="container">
-          <div class="footer__contact_info--icons">ICONS</div>
-          <div class="footer__contact_info--address">ADDRESS</div>
+          <div class="footer__contact_info--icons">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="footer__contact_info--address">
+            123 Address Street<br />
+            Hermosa Beach, CA 90254
+          </div>
           <div class="footer__contact_info--form">
             <form class="footer__contact-form" method="POST" action="#">
+              <div class="footer__h2 title">Contact us</div>
               <input
                 type="text"
                 class="contact-form__input input--name"
@@ -99,12 +110,8 @@
                 class="contact-form__input input--email"
                 placeholder="Email"
               />
-              <input
-                type="submit"
-                class="contact-form__btn btn btn--submit"
-                value="Submit"
-              />
             </form>
+            <button class="btn btn--submit">Sumbit</button>
           </div>
         </div>
       </div>

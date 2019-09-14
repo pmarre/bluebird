@@ -1,8 +1,8 @@
 * {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
-/* .intro--hidden {
+.intro--hidden {
   display: none;
 }
 
@@ -10,17 +10,20 @@
   position: relative;
   width: 100%;
   height: 100vh;
-} */
+
+  background: linear-gradient(127deg, #5999f2, #fff);
+  background-size: 400% 400%;
+  animation: background-shimmer 10s ease infinite;
+}
 
 .intro__logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* animation: intro__animation 3s 4s forwards; */
-  font-family: 'Montserrat', sans-serif;
+  animation: intro__animation 3s 4s forwards;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
-  display: none;
 }
 
 .intro__company_name {
@@ -28,7 +31,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   text-align: center;
   width: 100%;
@@ -37,7 +40,7 @@
 }
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .title--h1 {
@@ -69,7 +72,7 @@
   top: 30px;
   left: -300px;
   font-size: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav--mobile_list {
@@ -93,7 +96,7 @@
 .nav--li {
   margin: 30px 0 0;
   font-size: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .show--nav {
@@ -114,7 +117,7 @@
 
 .nav__logo {
   margin-right: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -172,7 +175,7 @@
   top: 100%;
   margin-top: 500px;
   position: relative;
-  animation: slide--up--section 1s 1s forwards;
+  animation: slide--up--section 1s forwards;
 }
 
 .work__h1 {
@@ -224,7 +227,7 @@
 .footer {
   margin-top: 40px;
   background-color: #000;
-  padding-top: 20px;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,6 +237,45 @@
   color: #fff;
   font-size: 1.5rem;
   width: 100%;
+  line-height: 1.5;
+}
+
+.footer__contact-form,
+.footer__contact_info--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__contact_info--icons {
+  margin: 20px 0;
+}
+
+.fab {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.fab:nth-child(2) {
+  margin: 0 10px;
+}
+
+.footer__contact_info--address {
+  color: #fff;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.contact-form__input {
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.btn--submit {
+  height: 40px;
+  width: 120px;
+  margin: 5px auto 20px;
 }
 
 /* --- KEY FRAMES --- */
@@ -354,5 +396,17 @@
 
   100% {
     left: 80%;
+  }
+}
+
+@keyframes background-shimmer {
+  0% {
+    background-position: 0% 13%;
+  }
+  50% {
+    background-position: 100% 88%;
+  }
+  100% {
+    background-position: 0% 13%;
   }
 }
